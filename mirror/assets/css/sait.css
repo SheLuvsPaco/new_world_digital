@@ -70,13 +70,14 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- бутони ---------- */
 .btn{--bg:var(--navy);--fg:#fff;--krag:var(--sky);display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 8px 0 26px;
   border-radius:999px;background:var(--bg);color:var(--fg);font:700 15.5px/1 var(--f-t);letter-spacing:.005em;white-space:nowrap;
-  position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--izh),box-shadow .35s var(--izh)}
+  position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--izh),box-shadow .35s var(--izh),color .25s var(--izh)}
 .btn .krag{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--krag);color:var(--navy);flex:none;
   transition:transform .45s var(--izh)}
 .btn .krag svg{width:18px;height:18px}
 .btn::before{content:'';position:absolute;z-index:-1;right:8px;top:50%;width:40px;height:40px;margin-top:-20px;border-radius:50%;
   background:var(--krag);transform:scale(0);transition:transform .55s var(--izh)}
-.btn:hover::before{transform:scale(9)}
+/* the fill must cover the widest buttons (full-width form/mobile buttons are up to ~690px) */
+.btn:hover::before{transform:scale(36)}
 .btn:hover{color:var(--navy)}
 .btn:hover .krag{transform:rotate(-45deg)}
 .btn:active{transform:scale(.97)}
@@ -92,6 +93,8 @@ ul{margin:0;padding:0;list-style:none}
 .btn--tel{padding:0 22px 0 8px;gap:12px}
 .btn--tel .krag{order:-1}
 .btn--tel::before{right:auto;left:8px}
+/* touch screens keep :hover after a tap; skip the hover fill there */
+@media (hover:none){.btn:hover::before{transform:scale(0)}.btn:hover,.btn--nebe:hover{color:var(--fg)}}
 .btn-red{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .vrazka{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;color:var(--ink);padding-block:6px;
   background:linear-gradient(currentColor,currentColor) 0 100%/100% 1.5px no-repeat;transition:background-size .4s var(--izh),gap .3s}
