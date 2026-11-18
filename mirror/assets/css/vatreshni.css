@@ -210,7 +210,8 @@
 a.k-karta:hover{transform:translateY(-3px)}
 .k-karta small{font:600 12px/1 var(--f-t);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
 .k-karta b{font:500 20px/1.2 var(--f-d);letter-spacing:-.02em}
-.k-karta .k-email{font-size:min(20px,calc(100cqi / 13.6));white-space:nowrap}
+/* the address is ~17x its font size wide; /13.6 made it overflow the card. Never below 15px: wrap after the @ instead */
+.k-karta .k-email{font-size:max(15px,min(20px,calc(100cqi / 17.5)));white-space:normal}
 .k-ik{width:44px;height:44px;border-radius:14px;background:var(--sky-soft);color:var(--navy);display:grid;place-items:center;margin-bottom:8px}
 .k-ik svg{width:22px;height:22px}
 .k-karta--tel{background:var(--navy);color:#fff;padding:28px}

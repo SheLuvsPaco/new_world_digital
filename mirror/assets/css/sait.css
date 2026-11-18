@@ -44,6 +44,8 @@ ul{margin:0;padding:0;list-style:none}
 .sek{padding-block:var(--sek)}
 .sek--malko{padding-block:calc(var(--sek)*.62)}
 .sek + .sek:not(.sek--tamno):not(.sek--nebe):not(.sek--bylo){padding-top:0}
+/* the navy contact box must not touch a navy section above it */
+.sek--tamno + .sek--malko{padding-top:calc(var(--sek)*.5)}
 .sek--tamno{background:var(--navy);color:#fff}
 .sek--tamno h1,.sek--tamno h2,.sek--tamno h3{color:#fff}
 .sek--bylo{background:var(--white)}
