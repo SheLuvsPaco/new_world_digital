@@ -354,6 +354,8 @@ ul{margin:0;padding:0;list-style:none}
 .prizov__d p{color:color-mix(in oklch,#fff 74%,var(--navy))}
 .prizov__dagi{position:absolute;right:-22%;bottom:-62%;width:58%;aspect-ratio:1;pointer-events:none;opacity:.45}
 .prizov > *:not(.prizov__dagi){position:relative;z-index:1}
+/* the link to the form inherited the dark text colour; make it white like the rest of the block */
+.prizov .vrazka{color:#fff}
 
 /* ---------- подвалът ---------- */
 .podval{background:var(--navy-deep);color:color-mix(in oklch,#fff 78%,var(--navy));padding-top:clamp(72px,9vw,128px);overflow:hidden;position:relative}
