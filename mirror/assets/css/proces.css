@@ -103,3 +103,14 @@ body.str-proces{background:#eef1f5}
 .pr-st.akt .pr-st__karta{opacity:1;transform:none}
 .pr-kontroli{left:auto;right:var(--pole);bottom:96px}
 @media (max-width:980px){.pr-kontroli{right:auto;left:16px;bottom:auto;top:84px}}
+
+/* ---- fixes 15/16: keep text off the model and the demo badge off the step bar ---- */
+.str-proces .pr-nav{bottom:52px}
+@media (min-width:981px){.str-proces .pr-kontroli{bottom:132px}}
+@media (max-width:980px){
+  .pr-golyamo{display:none}                       /* the step card already shows "01 / 12" and the title */
+  .pr-kontroli{left:auto;right:16px}
+  .pr-vavod .obv{background:rgb(238 241 245/.9);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    padding:20px;border-radius:var(--r-l);margin-inline:12px;width:auto}
+  .pr-st__karta{bottom:132px}
+}

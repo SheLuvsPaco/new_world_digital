@@ -72,7 +72,9 @@
   .geroi{height:380vh}
   .geroi__tekst{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:92px}
   .geroi__pod p{font-size:15.5px}
-  .geroi__pod .btn-red{display:none}
+  /* fix 14: the booking button was hidden on tablets and phones */
+  .geroi__pod .btn-red{display:flex;gap:10px}
+  .geroi__pod .btn{height:50px}
   .geroi__dolu{grid-template-columns:auto minmax(0,1fr);gap:18px}
   .geroi__podskazka{display:none}
   .proces-promo,.konstr-promo{grid-template-columns:minmax(0,1fr)}
@@ -84,6 +86,8 @@
   .bel3d{height:26px;font-size:11px;padding:0 10px 0 5px}
   .bel3d i{width:15px;height:15px}
   .geroi__pod p{max-width:none}
+  .geroi__pod .btn-red .btn--linia{display:none}   /* the call button is already in the header */
+  .geroi__pod .btn-red .btn{flex:1 1 auto;justify-content:space-between}
   .geroi__pr{font-size:52px}
 }
 @media (max-width:400px){
