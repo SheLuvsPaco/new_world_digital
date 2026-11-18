@@ -228,6 +228,8 @@ ul{margin:0;padding:0;list-style:none}
 .chisla{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .chislo{position:relative;display:flex;flex-direction:column;min-height:440px;padding:26px;border-radius:var(--r-l);overflow:hidden;background:#fff;color:var(--ink);box-shadow:var(--sen)}
 .chislo--navy{background:var(--navy);color:#fff}
+/* the global h1-h4 colour rule beat the card colour: keep the title white on the dark card */
+.chislo--navy .chislo__ime{color:inherit}
 .chislo--nebe{background:var(--sky);color:var(--navy)}
 .chislo--blido{background:var(--sky-soft)}
 .chislo__gore{display:flex;justify-content:space-between;align-items:center;font:600 12.5px/1 var(--f-t);letter-spacing:.08em;text-transform:uppercase;opacity:.75}
