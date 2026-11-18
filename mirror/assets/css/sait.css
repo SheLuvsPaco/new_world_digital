@@ -121,7 +121,8 @@ ul{margin:0;padding:0;list-style:none}
 .glava__nav li:hover > .nav-v svg,.glava__nav li.otvoreno > .nav-v svg{transform:rotate(180deg)}
 .glava__nav .nav-v[aria-current]{color:var(--sky-deep)}
 .znak{display:inline-grid;place-items:center;height:18px;padding:0 6px;border-radius:6px;background:var(--sky);color:#fff;font:700 10px/1 var(--f-t);letter-spacing:.04em;text-transform:uppercase}
-.glava__hapche{position:absolute;z-index:0;top:50%;left:0;height:40px;margin-top:-20px;border-radius:999px;background:var(--sky-soft);
+/* the pill is an <li> inside the nav list; ".glava__nav > li {position:relative}" used to win and put it in the flex row */
+.glava__nav > .glava__hapche{position:absolute;z-index:0;top:50%;left:0;height:40px;margin-top:-20px;border-radius:999px;background:var(--sky-soft);
   width:0;opacity:0;transition:transform .45s var(--izh),width .45s var(--izh),opacity .25s;pointer-events:none}
 .glava__desno{display:flex;align-items:center;gap:8px;flex:none}
 .glava__tel{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px 0 6px;border-radius:999px;font:700 15px/1 var(--f-t);white-space:nowrap}
