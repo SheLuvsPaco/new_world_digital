@@ -371,7 +371,8 @@ ul{margin:0;padding:0;list-style:none}
 .podval__tel{font:500 26px/1 var(--f-d);letter-spacing:-.03em;color:#fff;display:inline-block;margin-bottom:12px}
 .podval__dolu{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-block:24px;font-size:13.5px;color:color-mix(in oklch,#fff 56%,var(--navy))}
 .podval__dolu a{text-decoration:underline;text-underline-offset:3px}
-.podval__ime{font:700 clamp(54px,13.4vw,236px)/.8 var(--f-d);letter-spacing:-.06em;padding-inline:var(--pole);color:var(--navy);white-space:nowrap;text-align:center;margin-bottom:-.06em;
+/* 13 letters (РЕМОНТ СТУДИО) instead of the 8 of the old name: smaller size so it still fits */
+.podval__ime{font:700 clamp(26px,8vw,150px)/.8 var(--f-d);letter-spacing:-.06em;padding-inline:var(--pole);color:var(--navy);white-space:nowrap;text-align:center;margin-bottom:-.06em;
   user-select:none;display:flex;justify-content:center}
 .podval__ime span{display:inline-block;transition:transform .7s var(--izh),color .7s}
 .podval__ime.vleze span{color:color-mix(in oklch,var(--navy) 80%,var(--sky))}
