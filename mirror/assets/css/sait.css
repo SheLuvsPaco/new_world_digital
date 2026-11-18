@@ -107,15 +107,15 @@ ul{margin:0;padding:0;list-style:none}
 .chipove{display:flex;flex-wrap:wrap;gap:8px}
 
 /* ---------- главата като хапче ---------- */
-.glava{position:fixed;z-index:60;top:14px;left:50%;transform:translateX(-50%);width:min(calc(var(--shir) + 2*var(--pole) - 2*var(--pole) + 24px),calc(100% - 2*var(--pole) + 8px));
-  height:64px;display:flex;align-items:center;gap:18px;padding:0 8px 0 22px;border-radius:999px;background:rgb(255 255 255/.92);
+.glava{position:fixed;z-index:60;top:14px;left:50%;transform:translateX(-50%);width:max-content;min-width:min(calc(var(--shir) + 24px),calc(100% - 2*var(--pole) + 8px));max-width:calc(100% - 2*var(--pole) + 8px);
+  height:64px;display:flex;align-items:center;gap:12px;padding:0 8px 0 22px;border-radius:999px;background:rgb(255 255 255/.92);
   box-shadow:0 1px 0 rgb(20 30 60/.04),0 10px 34px -16px rgb(20 30 60/.32);transition:height .4s var(--izh),top .4s var(--izh),box-shadow .4s}
 .glava.svita{height:58px;top:10px}
 .glava__logo{flex:none;display:block;height:34px}
 .glava__logo img{height:100%;width:auto}
 .glava__nav{display:flex;align-items:center;gap:2px;margin-inline:auto;position:relative}
 .glava__nav > li{position:relative}
-.glava__nav a.nav-v,.glava__nav button.nav-v{display:flex;align-items:center;gap:6px;height:40px;padding:0 13px;border-radius:999px;font:600 14.5px/1 var(--f-t);white-space:nowrap;
+.glava__nav a.nav-v,.glava__nav button.nav-v{display:flex;align-items:center;gap:6px;height:40px;padding:0 11px;border-radius:999px;font:600 14.5px/1 var(--f-t);white-space:nowrap;
   color:var(--ink);position:relative;z-index:1;transition:color .25s}
 .glava__nav .nav-v svg{width:12px;height:12px;transition:transform .3s}
 .glava__nav li:hover > .nav-v svg,.glava__nav li.otvoreno > .nav-v svg{transform:rotate(180deg)}
@@ -472,11 +472,20 @@ ul{margin:0;padding:0;list-style:none}
 .str-404 b{display:block;font:600 clamp(120px,24vw,320px)/.85 var(--f-d);letter-spacing:-.07em;color:var(--navy)}
 
 /* ---------- телефон и таблет ---------- */
-@media (max-width:1180px){
-  .zashto[data-n="4"],.zashto[data-n="5"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* header: the bar is sized by its content; tighten the menu before it runs out of room, then collapse it */
+@media (max-width:1400px){
   .glava__nav .nav-v{padding:0 9px;font-size:14px}
   .glava__tel span{display:none}
   .glava__tel{padding-right:6px}
+}
+@media (max-width:1300px){
+  .glava__nav,.glava .btn{display:none}
+  .glava__menu{display:grid}
+  .glava{gap:8px;width:calc(100% - 2*var(--pole) + 8px)}
+  .glava__desno{margin-left:auto}
+}
+@media (max-width:1180px){
+  .zashto[data-n="4"],.zashto[data-n="5"]{grid-template-columns:repeat(2,minmax(0,1fr))}
   .chisla{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stapki{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stapka:last-child{grid-column:span 2;min-height:0}
