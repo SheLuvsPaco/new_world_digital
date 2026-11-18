@@ -1,0 +1,1122 @@
+[
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/konstruktor.css?v=e114ee00",
+    "status": 200,
+    "mimeType": "text/css",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/konstruktor.css",
+    "size": 8336
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/nachalo.css?v=3ef85a3b",
+    "status": 200,
+    "mimeType": "text/css",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/nachalo.css",
+    "size": 7261
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/proces.css?v=9d78495b",
+    "status": 200,
+    "mimeType": "text/css",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/proces.css",
+    "size": 7401
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/sait.css?v=f9e4feb0",
+    "status": 304,
+    "mimeType": "application/octet-stream",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/sait.css",
+    "size": 41241
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/shriftove.css?v=bfe47f52",
+    "status": 304,
+    "mimeType": "application/octet-stream",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/shriftove.css",
+    "size": 1622
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/css/vatreshni.css?v=a4c66e17",
+    "status": 304,
+    "mimeType": "application/octet-stream",
+    "resourceType": "stylesheet",
+    "localFile": "mirror/assets/css/vatreshni.css",
+    "size": 19085
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/fonts/Manrope-300-800-cyrillic.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/assets/fonts/Manrope-300-800-cyrillic.woff2",
+    "size": 14368
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/fonts/Manrope-300-800-latin.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/assets/fonts/Manrope-300-800-latin.woff2",
+    "size": 24436
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/fonts/Unbounded-300-800-cyrillic.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/assets/fonts/Unbounded-300-800-cyrillic.woff2",
+    "size": 31460
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/fonts/Unbounded-300-800-latin.woff2",
+    "status": 200,
+    "mimeType": "font/woff2",
+    "resourceType": "font",
+    "localFile": "mirror/assets/fonts/Unbounded-300-800-latin.woff2",
+    "size": 50892
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/beton.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/beton.jpg",
+    "size": 23846
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/boya-n.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/boya-n.jpg",
+    "size": 65911
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/darvo-tamno.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/darvo-tamno.jpg",
+    "size": 27432
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/darvo.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/darvo.jpg",
+    "size": 36411
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/granitogres.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/granitogres.jpg",
+    "size": 245222
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/laminat.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/laminat.jpg",
+    "size": 134647
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/mazilka-stara-n.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/mazilka-stara-n.jpg",
+    "size": 39998
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/mazilka-stara.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/3d/mazilka-stara.jpg",
+    "size": 141226
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/parket-nov-n.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/parket-nov-n.jpg",
+    "size": 13632
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/parket-nov.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/parket-nov.jpg",
+    "size": 135557
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/parket-star-n.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/parket-star-n.jpg",
+    "size": 13526
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/parket-star.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/parket-star.jpg",
+    "size": 148972
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/plochki-novi.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/plochki-novi.jpg",
+    "size": 126350
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/plochki-stari.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/plochki-stari.jpg",
+    "size": 161342
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/tuhla-n.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/tuhla-n.jpg",
+    "size": 55714
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/tuhla.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/tuhla.jpg",
+    "size": 209194
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/3d/tukan.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/3d/tukan.jpg",
+    "size": 28316
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/kak-proticha-komunikatsiyata-s-remontna-firma-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/blog/kak-proticha-komunikatsiyata-s-remontna-firma-1024.webp",
+    "size": 55248
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/kak-proticha-komunikatsiyata-s-remontna-firma-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/blog/kak-proticha-komunikatsiyata-s-remontna-firma-640.webp",
+    "size": 32456
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete-1024.webp",
+    "size": 66278
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete-640.webp",
+    "size": 41546
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/predi-i-sled-remonta-kak-pravilnoto-planirane-pravi-razlikata-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/blog/predi-i-sled-remonta-kak-pravilnoto-planirane-pravi-razlikata-1024.webp",
+    "size": 90482
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/predi-i-sled-remonta-kak-pravilnoto-planirane-pravi-razlikata-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/predi-i-sled-remonta-kak-pravilnoto-planirane-pravi-razlikata-640.webp",
+    "size": 46028
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove-1024.webp",
+    "size": 207628
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove-640.webp",
+    "size": 99046
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/tsyalosten-remont-ili-rabota-s-razlichni-maystori-koe-e-po-dobriyat-izbor-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/blog/tsyalosten-remont-ili-rabota-s-razlichni-maystori-koe-e-po-dobriyat-izbor-1024.webp",
+    "size": 126620
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/tsyalosten-remont-ili-rabota-s-razlichni-maystori-koe-e-po-dobriyat-izbor-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/blog/tsyalosten-remont-ili-rabota-s-razlichni-maystori-koe-e-po-dobriyat-izbor-640.webp",
+    "size": 55506
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost-1024.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost-1024.webp",
+    "size": 144178
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost-640.webp",
+    "size": 67372
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/logo/logo-firma-600.png",
+    "status": 200,
+    "mimeType": "image/png",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/logo/logo-firma-600.png",
+    "size": 5770
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/logo/znak-180.png",
+    "status": 200,
+    "mimeType": "image/png",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/logo/znak-180.png",
+    "size": 1680
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/logo/znak-32.png",
+    "status": 200,
+    "mimeType": "image/png",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/logo/znak-32.png",
+    "size": 319
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-1-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-1-1080.webp",
+    "size": 70320
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-1-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-1-640.webp",
+    "size": 32632
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-2-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-2-1080.webp",
+    "size": 164784
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-2-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-2-640.webp",
+    "size": 71234
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-3-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-3-1080.webp",
+    "size": 221126
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-3-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-3-640.webp",
+    "size": 74930
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-4-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-4-1080.webp",
+    "size": 90654
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-4-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-4-640.webp",
+    "size": 45762
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-5-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-5-1080.webp",
+    "size": 170368
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-5-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-5-640.webp",
+    "size": 79662
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-6-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-6-1080.webp",
+    "size": 115876
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-6-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-6-640.webp",
+    "size": 54704
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-7-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-7-1080.webp",
+    "size": 128152
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-7-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-7-640.webp",
+    "size": 62108
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-8-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-8-1080.webp",
+    "size": 164454
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-briz-varna-8-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-briz-varna-8-640.webp",
+    "size": 68882
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-1-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-1-1080.webp",
+    "size": 74670
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-1-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-1-640.webp",
+    "size": 35022
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-2-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-2-1080.webp",
+    "size": 109688
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-2-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-2-640.webp",
+    "size": 57432
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-3-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-3-1080.webp",
+    "size": 108078
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-3-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-3-640.webp",
+    "size": 58570
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-4-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-4-1080.webp",
+    "size": 97016
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-4-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-4-640.webp",
+    "size": 52128
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-5-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-5-1080.webp",
+    "size": 133360
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-5-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-5-640.webp",
+    "size": 69172
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-6-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-6-1080.webp",
+    "size": 116326
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-6-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-6-640.webp",
+    "size": 62668
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-7-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-7-1080.webp",
+    "size": 94500
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-7-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-7-640.webp",
+    "size": 49286
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-8-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-8-1080.webp",
+    "size": 79330
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-8-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-8-640.webp",
+    "size": 41240
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-9-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-9-1080.webp",
+    "size": 121046
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-9-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-9-640.webp",
+    "size": 61904
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-1-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-1-1080.webp",
+    "size": 50132
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-1-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-1-640.webp",
+    "size": 23202
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-2-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-2-1080.webp",
+    "size": 89940
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-2-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-2-640.webp",
+    "size": 48572
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-3-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-3-1080.webp",
+    "size": 78418
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-3-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-3-640.webp",
+    "size": 42318
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-4-1080.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-4-1080.webp",
+    "size": 236254
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-4-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/obekti/ednostaen-apartament-v-kv-vazrazhdane-varna-4-640.webp",
+    "size": 98766
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/og.jpg",
+    "status": 200,
+    "mimeType": "image/jpeg",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/og.jpg",
+    "size": 118096
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/chuk-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/predmeti/chuk-160.webp",
+    "size": 3628
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/fotyoil-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/predmeti/fotyoil-160.webp",
+    "size": 7274
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/klyuch-vrata-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/predmeti/klyuch-vrata-160.webp",
+    "size": 5844
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/kontakt-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/predmeti/kontakt-160.webp",
+    "size": 3934
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/lampa-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/predmeti/lampa-160.webp",
+    "size": 3546
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/malaj-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/predmeti/malaj-160.webp",
+    "size": 5564
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/parket-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/predmeti/parket-160.webp",
+    "size": 6344
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/plochki-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/predmeti/plochki-160.webp",
+    "size": 4802
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/prozorets-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/predmeti/prozorets-160.webp",
+    "size": 1606
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/smesitel-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/predmeti/smesitel-160.webp",
+    "size": 4234
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/sprei-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "image",
+    "localFile": "mirror/assets/img/predmeti/sprei-160.webp",
+    "size": 5534
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/predmeti/valyak-160.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/predmeti/valyak-160.webp",
+    "size": 7494
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-banya-1280.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-banya-1280.webp",
+    "size": 122084
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-banya-2048.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/uslugi/u-banya-2048.webp",
+    "size": 280974
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-banya-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-banya-640.webp",
+    "size": 30394
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-fasada-1280.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-fasada-1280.webp",
+    "size": 136974
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-fasada-2048.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/uslugi/u-fasada-2048.webp",
+    "size": 291170
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-fasada-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-fasada-640.webp",
+    "size": 40182
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-pokriv-1280.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-pokriv-1280.webp",
+    "size": 116574
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-pokriv-2048.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/uslugi/u-pokriv-2048.webp",
+    "size": 282930
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-pokriv-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-pokriv-640.webp",
+    "size": 30304
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-tsyalosten-1280.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-tsyalosten-1280.webp",
+    "size": 156186
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-tsyalosten-2048.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "enriched",
+    "localFile": "mirror/assets/img/uslugi/u-tsyalosten-2048.webp",
+    "size": 344736
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/img/uslugi/u-tsyalosten-640.webp",
+    "status": 200,
+    "mimeType": "image/webp",
+    "resourceType": "other",
+    "localFile": "mirror/assets/img/uslugi/u-tsyalosten-640.webp",
+    "size": 41966
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/js/konstruktor.js?v=1f802668",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/assets/js/konstruktor.js",
+    "size": 809367
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/js/kontakti.js?v=71ca278e",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/assets/js/kontakti.js",
+    "size": 2454
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/js/nachalo.js?v=2153035f",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/assets/js/nachalo.js",
+    "size": 794149
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/js/osnova.js?v=01fb5d91",
+    "status": 304,
+    "mimeType": "application/octet-stream",
+    "resourceType": "script",
+    "localFile": "mirror/assets/js/osnova.js",
+    "size": 138888
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/assets/js/proces.js?v=3630d046",
+    "status": 200,
+    "mimeType": "application/javascript",
+    "resourceType": "script",
+    "localFile": "mirror/assets/js/proces.js",
+    "size": 788841
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/blog/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/blog/index.html",
+    "size": 21445
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/blog/nay-chestite-greshki-pri-remont-i-kak-da-gi-izbegnete/index.html",
+    "size": 28004
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/blog/remont-na-pokrivi-i-hidroizolatsiya-vav-varna-kak-da-zashtitim-zhilishtnata-sgrada-ot-techove/index.html",
+    "size": 35584
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/blog/vanshna-toploizolatsiya-i-remont-na-fasadi-vav-varna-kakvo-tryabva-da-znae-etazhnata-sobstvenost/index.html",
+    "size": 32575
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/deklaratsiya-za-lichni-danni/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/deklaratsiya-za-lichni-danni/index.html",
+    "size": 14711
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/galeriya/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/galeriya/index.html",
+    "size": 28643
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/index.html",
+    "size": 60213
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/dogovor/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/dogovor/index.html",
+    "size": 23723
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/finalno-pochistvane/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/finalno-pochistvane/index.html",
+    "size": 20286
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/index.html",
+    "size": 28022
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/izpalnenie/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/izpalnenie/index.html",
+    "size": 20470
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/oferta/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/oferta/index.html",
+    "size": 21225
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kak-rabotim/ogled-i-konsultirane/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kak-rabotim/ogled-i-konsultirane/index.html",
+    "size": 20427
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/konstruktor/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/konstruktor/index.html",
+    "size": 27547
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/kontakti/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/kontakti/index.html",
+    "size": 20313
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/politika-za-poveritelnost/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/politika-za-poveritelnost/index.html",
+    "size": 23425
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/proces/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/proces/index.html",
+    "size": 34267
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/uslugi/remont-na-banya/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/uslugi/remont-na-banya/index.html",
+    "size": 37087
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/uslugi/remont-na-pokrivi-i-hidroizolatsiya/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/uslugi/remont-na-pokrivi-i-hidroizolatsiya/index.html",
+    "size": 27040
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/uslugi/tsyalosten-remont-na-zhilishte/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/uslugi/tsyalosten-remont-na-zhilishte/index.html",
+    "size": 36088
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/uslugi/vanshna-toploizolatsiya-i-obnovyavane-na-fasadi/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/uslugi/vanshna-toploizolatsiya-i-obnovyavane-na-fasadi/index.html",
+    "size": 27998
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/za-nas/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/za-nas/index.html",
+    "size": 36141
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/zavarsheni-obekti/dvustaen-apartament-briz-varna/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/zavarsheni-obekti/dvustaen-apartament-briz-varna/index.html",
+    "size": 24391
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/zavarsheni-obekti/dvustaen-apartament-v-tsentara-na-varna/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/zavarsheni-obekti/dvustaen-apartament-v-tsentara-na-varna/index.html",
+    "size": 24717
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/zavarsheni-obekti/ednostaen-apartament-v-kv-vazrazhdane-varna/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/zavarsheni-obekti/ednostaen-apartament-v-kv-vazrazhdane-varna/index.html",
+    "size": 22030
+  },
+  {
+    "url": "https://konkurs-zadacha.vercel.app/zavarsheni-obekti/",
+    "status": 200,
+    "mimeType": "text/html",
+    "resourceType": "document",
+    "localFile": "mirror/zavarsheni-obekti/index.html",
+    "size": 25804
+  }
+]
