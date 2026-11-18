@@ -181,6 +181,8 @@ ul{margin:0;padding:0;list-style:none}
   filter:drop-shadow(0 3px 6px rgb(20 30 60/.22))}
 .ryb__valyak svg{width:30px;height:46px;overflow:visible}
 .ryb__valyak .valec{transform-box:fill-box;transform-origin:center}
+/* fix 20: the roller can be dragged (popravki.js) */
+.ryb__valyak{cursor:grab;touch-action:none}.ryb__valyak.vlachi{cursor:grabbing}
 @media (hover:none),(max-width:1100px){.ryb{display:none}}
 
 /* ---------- значката на демото ---------- */

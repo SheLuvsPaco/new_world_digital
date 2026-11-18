@@ -97,3 +97,6 @@
   .geroi__etap b{font-size:15px}
   .geroi__etap small{font-size:10.5px}
 }
+
+/* fix 18: hide the lens when the pointer leaves the model (class set by popravki.js) */
+.geroi__leshta.vidima.van{opacity:0;transform:translate(var(--x),var(--y)) scale(.6)}
