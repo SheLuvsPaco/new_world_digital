@@ -205,7 +205,7 @@ ul{margin:0;padding:0;list-style:none}
 .js .redove.vleze .red:nth-child(4) > span{transition-delay:.24s}
 
 /* ---------- огромните контурни думи зад разделите ---------- */
-.fon-duma{position:absolute;z-index:0;left:0;right:0;pointer-events:none;white-space:nowrap;font:600 clamp(120px,19vw,300px)/.9 var(--f-d);letter-spacing:-.04em;
+.fon-duma{position:absolute;z-index:0;left:0;right:0;pointer-events:none;white-space:nowrap;font:600 clamp(80px,12vw,190px)/.9 var(--f-d);letter-spacing:-.04em;
   color:transparent;-webkit-text-stroke:1.5px var(--line-2);will-change:transform;user-select:none}
 .sek--tamno .fon-duma{-webkit-text-stroke-color:rgb(255 255 255/.12)}
 .s-fon{position:relative;overflow:clip}
@@ -244,7 +244,8 @@ ul{margin:0;padding:0;list-style:none}
 .chislo__ime + p{font-size:14.5px;line-height:1.5;opacity:.78;margin-top:8px}
 
 /* ---------- голямото изречение със стикери ---------- */
-.izrechenie{font:500 clamp(30px,4.3vw,62px)/1.18 var(--f-d);letter-spacing:-.035em;color:var(--ink);max-width:1180px}
+/* fix 25: body text, not a second headline */
+.izrechenie{font:500 clamp(24px,2.8vw,42px)/1.22 var(--f-d);letter-spacing:-.035em;color:var(--ink);max-width:1180px}
 .izrechenie .tiho{color:var(--ink-3)}
 .stiker{display:inline-flex;align-items:center;vertical-align:middle;height:.92em;margin:0 .08em;border-radius:999px;overflow:hidden;position:relative;top:-.06em;
   background:var(--sky-soft);transform:rotate(var(--rot,0deg));transition:transform .5s var(--izh)}
@@ -278,7 +279,8 @@ ul{margin:0;padding:0;list-style:none}
 .u-karta:hover .u-karta__kadar img{transform:scale(1.03)}
 
 /* ---------- логото оживява: огромни думи и 3D предмет в средата ---------- */
-.ozhivyava{position:relative;height:420vh}
+/* fix 26: four screens over 3 viewports of scrolling instead of 4.2 */
+.ozhivyava{position:relative;height:300vh}
 .ozhivyava__sc{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:var(--paper);transition:background-color .8s var(--izh)}
 .ozhivyava__dumi{position:absolute;inset:0;display:grid;place-items:center}
 .ozh-ekran{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:0 var(--pole);
@@ -294,6 +296,8 @@ ul{margin:0;padding:0;list-style:none}
 .ozh-info__n small{font-size:15px;letter-spacing:0;opacity:.6;margin-left:6px}
 .ozh-info h3{font-size:clamp(20px,1.8vw,26px);margin-bottom:8px}
 .ozh-info p{max-width:520px;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+.ozh-vrazka{margin-top:12px}
+.ozh-tamno .ozh-vrazka{color:#fff}
 .ozhivyava__platno{position:absolute;inset:0;z-index:2;pointer-events:none}
 .ozhivyava__platno canvas{width:100%!important;height:100%!important}
 .ozh-tamno .ozh-info__n,.ozh-tamno .ozh-info h3{color:#fff}

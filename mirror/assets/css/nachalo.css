@@ -2,11 +2,12 @@
 .geroi{position:relative;height:440vh;background:var(--paper)}
 .geroi__sc{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;isolation:isolate;
   background:radial-gradient(120% 80% at 50% 70%,#fff 0%,var(--paper) 62%)}
-.geroi__tekst{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:20px 56px;align-items:end;padding-top:clamp(100px,12vh,128px);position:relative;z-index:3;pointer-events:none}
+/* fix 24: description and buttons sit under the heading instead of in the far top-right corner */
+.geroi__tekst{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start;padding-top:clamp(100px,12vh,128px);position:relative;z-index:3;pointer-events:none}
 .geroi__tekst a,.geroi__tekst button{pointer-events:auto}
 .geroi__h1{font-size:clamp(38px,4.9vw,74px);line-height:1;letter-spacing:-.045em;font-weight:500}
 .geroi__h1 .red:nth-child(2){color:var(--navy)}
-.geroi__pod{display:flex;flex-direction:column;gap:20px;padding-bottom:8px}
+.geroi__pod{display:flex;flex-direction:column;gap:20px;padding-bottom:8px;max-width:520px}
 .geroi__pod p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:420px}
 .geroi__pod .btn--linia svg{margin-right:-4px}
 .geroi__scena{position:absolute;inset:0;z-index:1;cursor:none}
