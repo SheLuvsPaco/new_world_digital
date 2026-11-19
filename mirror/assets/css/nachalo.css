@@ -120,9 +120,8 @@
 }
 
 /* ================= hero redesign ================= */
-/* "не мислите" gets a yellow highlighter stroke (yellow text on the light background would be unreadable) */
-.geroi__h1 .red:nth-child(2) > span{background:linear-gradient(transparent 56%,var(--zhalto) 56%,var(--zhalto) 90%,transparent 90%);
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;padding-inline:.06em}
+/* "не мислите" in the yellow accent colour */
+.geroi__h1 .red:nth-child(2) > span{color:var(--zhalto)}
 /* soft yellow glow under the 3D model */
 .geroi__scena::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(var(--gw,30%) var(--gh,24%) at var(--gx,50%) var(--gy,60%),rgb(209 254 23/.62),rgb(209 254 23/.22) 48%,transparent 72%),
