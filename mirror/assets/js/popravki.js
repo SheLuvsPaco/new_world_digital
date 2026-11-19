@@ -160,12 +160,24 @@
   const words = [...document.querySelectorAll('[data-fon-duma]')];
   if (!words.length) return;
   const mq = matchMedia('(max-width: 640px)');
+  words.forEach((w) => { w.dataset.top = w.style.top; });
   const fit = () => words.forEach((w) => {
-    w.style.fontSize = '';
+    const sec = w.parentElement;
+    const obv = sec.querySelector(':scope > .obv');
+    w.style.fontSize = ''; w.style.top = w.dataset.top; sec.style.paddingTop = '';
     if (!mq.matches) return;
     const avail = w.clientWidth - 24;
     const size = parseFloat(getComputedStyle(w).fontSize);
     if (w.scrollWidth > avail) w.style.fontSize = `${Math.floor(size * avail / w.scrollWidth)}px`;
+    // sit in the space above the section's content instead of on top of the label/heading
+    if (!obv) return;
+    const h = w.offsetHeight;
+    let top = obv.offsetTop - h - 6;
+    if (top < 28) {
+      sec.style.paddingTop = `${parseFloat(getComputedStyle(sec).paddingTop) + (28 - top)}px`;
+      top = 28;
+    }
+    w.style.top = `${top}px`;
   });
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
   addEventListener('resize', fit);
