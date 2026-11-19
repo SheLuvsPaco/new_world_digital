@@ -592,3 +592,22 @@ ul{margin:0;padding:0;list-style:none}
 .bel3d i::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
 .bel3d.vid{opacity:1;transform:translate(var(--x),var(--y)) translate(-50%,-50%) scale(1)}
 .bel3d.staro i{background:var(--ink-3)}
+
+/* ================= mobile pass ================= */
+html{overflow-x:clip}                                   /* a 1px marquee overflow made the page scroll sideways */
+@media (max-width:640px){
+  /* the demo credit was a full-width bar over the bottom of every screen; now a small pill */
+  .demo-badzh{right:auto;max-width:calc(100% - 20px);font-size:11px;height:28px;padding:0 10px;
+    position:absolute}                                   /* shown on the first screen, then scrolls away instead of covering content */
+  /* number cards were 380-440px tall each, one per row */
+  .chislo{min-height:0}
+  .chislo__gr{min-height:90px}
+  /* bigger touch targets */
+  .podval__tel{padding-block:8px;margin-bottom:4px}
+  .podval__dolu a{display:inline-block;padding-block:10px}
+  .otmetka input{width:26px;height:26px}
+  .vrazka{padding-block:10px}
+  .glava__logo{box-sizing:content-box;padding-block:8px}
+  /* the inline sticker in the mission text dropped to 8px */
+  .stiker--tekst{font-size:max(11px,.34em)}
+}

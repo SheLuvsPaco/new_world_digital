@@ -100,3 +100,17 @@
 
 /* fix 18: hide the lens when the pointer leaves the model (class set by popravki.js) */
 .geroi__leshta.vidima.van{opacity:0;transform:translate(var(--x),var(--y)) scale(.6)}
+
+/* ================= mobile pass ================= */
+@media (max-width:980px){
+  .geroi{height:260vh}                                  /* 0-100% renovation over less scrolling */
+}
+@media (max-width:640px){
+  .bel3d{font-size:12px}
+  .geroi__etap small{font-size:11.5px}
+  /* Основа / Форма / Детайли / Топлина: the 3D object sat on the text; give it the top part, the text a backing */
+  .ozhivyava__platno{bottom:40%}
+  .ozh-info{left:12px;right:12px;bottom:52px;padding:16px 18px;border-radius:var(--r-l);
+    background:rgb(255 255 255/.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .ozh-tamno .ozh-info{background:rgb(36 52 92/.86)}
+}
