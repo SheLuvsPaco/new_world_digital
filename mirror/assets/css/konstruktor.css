@@ -107,7 +107,7 @@
 
 /* fix 17: the floor plan is the same for every home type; say so next to the area */
 .kn__primer{position:absolute;right:var(--pole);top:calc(104px + clamp(48px,5vw,84px) * .85 + 14px);z-index:2;max-width:230px;text-align:right;font-size:13px;line-height:1.45;color:var(--ink-3)}
-@media (max-width:640px){.kn__primer{top:auto;bottom:136px;max-width:190px;font-size:12px;background:rgb(255 255 255/.86);padding:6px 10px;border-radius:10px}}
+@media (max-width:640px){.kn__primer{display:none}}   /* phones: no example-layout note over the model */
 @media (max-width:640px){.str-kn .demo-badzh{left:auto;right:10px}}
 /* the 4 home-type cards were too narrow for their labels ("Едностаен" overflowed): 2x2 when the panel is narrow */
 .kn-st{container-type:inline-size}
