@@ -24,7 +24,7 @@
 @font-face{font-family:'Unbounded';font-style:normal;font-weight:300 800;font-display:swap;src:url(/assets/fonts/Unbounded-300-800-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:'Unbounded';font-style:normal;font-weight:300 800;font-display:swap;src:url(/assets/fonts/Unbounded-300-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 </style>
-<link rel="stylesheet" href="/assets/css/sait.css?v=a9a18e45">
+<link rel="stylesheet" href="/assets/css/sait.css?v=c987a889">
 <link rel="stylesheet" href="/assets/css/vatreshni.css?v=761e958a">
 <script>document.documentElement.classList.add('js')</script>
 
@@ -103,17 +103,18 @@
   <div class="kontakti__forma karta vlez" id="forma">
     <h2 class="h-3">или попълнете формата и ние ще се свържем с вас възможно най-скоро:</h2>
     <form class="forma" data-forma novalidate>
-      <div class="pole"><label>Какво ремонтирате?</label>
+      <div class="pole"><label>Какво ремонтирате? <small class="pole__pod">Може да изберете повече от едно</small></label>
         <div class="izbor-chip" data-izbor><button type="button" aria-pressed="false">Апартамент</button><button type="button" aria-pressed="false">Къща</button><button type="button" aria-pressed="false">Баня</button><button type="button" aria-pressed="false">Фасада</button><button type="button" aria-pressed="false">Покрив</button><button type="button" aria-pressed="false">Друго</button></div></div>
       <div class="forma__red">
-        <div class="pole"><label for="f-ime">Име (задължително)</label><input id="f-ime" name="ime" autocomplete="name" required><span class="zab">Напишете името си.</span></div>
-        <div class="pole"><label for="f-tel">Телефон</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+        <div class="pole"><label for="f-ime">Име <span class="zad" aria-hidden="true">*</span></label><input id="f-ime" name="ime" autocomplete="name" required placeholder="напр. Иван Петров"><span class="zab">Напишете името си.</span></div>
+        <div class="pole"><label for="f-tel">Телефон</label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" placeholder="напр. 088 123 4567"></div>
       </div>
-      <div class="pole"><label for="f-email">e-mail (задължително)</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="zab">Проверете имейла.</span></div>
-      <div class="pole"><label for="f-sab">Съобщение (задължително)</label><textarea id="f-sab" name="saobshtenie" required></textarea><span class="zab">Напишете няколко думи за ремонта.</span></div>
+      <div class="pole"><label for="f-email">Имейл <span class="zad" aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="напр. ivan.petrov@gmail.com"><span class="zab">Проверете имейла.</span></div>
+      <div class="pole"><label for="f-sab">Съобщение <span class="zad" aria-hidden="true">*</span></label><textarea id="f-sab" name="saobshtenie" required placeholder="напр. Двустаен апартамент, около 65 м², кв. Чайка. Искаме нова баня, настилки и боядисване. Удобно ни е за оглед в делничен ден след 17 ч."></textarea><span class="zab">Напишете няколко думи за ремонта.</span></div>
       <label class="otmetka"><input type="checkbox" name="saglasie" required> <span>Декларирам съгласие за обработка на лични данни с цел отговор на моето запитване. <a href="/deklaratsiya-za-lichni-danni/">Декларацията</a></span></label>
       <p class="zab-saglasie" hidden>Нужно е съгласието, за да ви отговорим.</p>
-      <button class="btn" type="submit">Изпрати <span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <p class="forma__bel"><span class="zad">*</span> Задължителни полета. Отговаряме в рамките на един работен ден.</p>
+      <button class="btn btn--zhalto forma__btn" type="submit">Изпратете запитване <span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
     </form>
     <div class="forma-gotovo" hidden data-gotovo>
       <h3>Запитването е готово</h3>

@@ -623,3 +623,19 @@ html{overflow-x:clip}                                   /* a 1px marquee overflo
 /* "Основа / Форма / Детайли / Топлина": keep the scroll-driven word and letters on their own layers */
 .ozh-duma,.ozh-duma .b{will-change:transform}
 .ozhivyava__platno canvas{will-change:transform}
+
+/* contact form: more polished fields, examples as placeholders, yellow send button */
+.forma{gap:18px}
+.pole label{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;color:var(--ink)}
+.pole__pod{font-weight:500;font-size:12.5px;color:var(--ink-3)}
+.zad{color:#C8553D;font-weight:700}
+.pole input,.pole textarea{background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);transition:box-shadow .2s,background .2s}
+.pole input:hover,.pole textarea:hover{box-shadow:inset 0 0 0 1px var(--line-2)}
+.pole input:focus,.pole textarea:focus{background:#fff;box-shadow:inset 0 0 0 2px var(--navy),0 0 0 4px rgb(76 172 216/.18)}
+.pole input::placeholder,.pole textarea::placeholder{color:var(--ink-3);opacity:.75}
+.pole textarea{min-height:150px;line-height:1.55}
+.izbor-chip button{background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)}
+.izbor-chip button:hover{box-shadow:inset 0 0 0 1px var(--navy)}
+.izbor-chip button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.forma__bel{font-size:13px;color:var(--ink-3);margin:0}
+.forma__btn{width:100%;justify-content:space-between;height:60px;font-size:16px}
