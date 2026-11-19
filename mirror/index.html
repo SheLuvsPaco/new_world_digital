@@ -24,8 +24,174 @@
 @font-face{font-family:'Unbounded';font-style:normal;font-weight:300 800;font-display:swap;src:url(/assets/fonts/Unbounded-300-800-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
 @font-face{font-family:'Unbounded';font-style:normal;font-weight:300 800;font-display:swap;src:url(/assets/fonts/Unbounded-300-800-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 </style>
-<link rel="stylesheet" href="/assets/css/sait.css?v=c987a889">
-<link rel="stylesheet" href="/assets/css/nachalo.css?v=62a5553c">
+<link rel="stylesheet" href="/assets/css/sait.css?v=b1c72e2a">
+<style data-inline="nachalo.css">/* Началото: 3D героят, промотата, движенията на числата */
+.geroi{position:relative;height:440vh;background:var(--paper)}
+.geroi__sc{position:sticky;top:0;height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;isolation:isolate;
+  background:radial-gradient(120% 80% at 50% 70%,#fff 0%,var(--paper) 62%)}
+/* fix 24: description and buttons sit under the heading instead of in the far top-right corner */
+.geroi__tekst{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start;padding-top:clamp(100px,12vh,128px);position:relative;z-index:3;pointer-events:none}
+.geroi__tekst a,.geroi__tekst button{pointer-events:auto}
+.geroi__h1{font-size:clamp(38px,4.9vw,74px);line-height:1;letter-spacing:-.045em;font-weight:500}
+.geroi__h1 .red:nth-child(2){color:var(--navy)}
+.geroi__pod{display:flex;flex-direction:column;gap:20px;padding-bottom:8px;max-width:520px}
+.geroi__pod p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:420px}
+.geroi__pod .btn--linia svg{margin-right:-4px}
+.geroi__scena{position:absolute;inset:0;z-index:1}
+/* cursor hidden only while the pointer is over the model (class set by popravki.js) */
+.geroi__scena.na-modela{cursor:none}
+.geroi__scena.bez-3d{cursor:auto}
+.geroi__scena canvas{position:absolute;inset:0;width:100%!important;height:100%!important;outline:none}
+.geroi__poster{position:absolute;left:4%;right:4%;top:30%;bottom:9%;width:92%;height:61%;object-fit:contain;object-position:50% 50%;transition:opacity .9s var(--izh)}
+.geroi__scena.zhivo .geroi__poster{opacity:0;pointer-events:none}
+/* soften the loading picture's box edges */
+.geroi__poster{-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
+.geroi__leshta{position:absolute;z-index:4;left:0;top:0;width:calc(var(--r,130px)*2);height:calc(var(--r,130px)*2);margin:calc(var(--r,130px)*-1) 0 0 calc(var(--r,130px)*-1);
+  border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--sky),0 22px 50px -20px rgb(20 30 60/.45);pointer-events:none;opacity:0;
+  transform:translate(var(--x,-500px),var(--y,-500px)) scale(.6);transition:opacity .35s,transform .45s var(--izh)}
+.geroi__leshta.vidima{opacity:1;transform:translate(var(--x),var(--y)) scale(1)}
+.geroi__leshta span{position:absolute;left:50%;top:100%;transform:translate(-50%,12px);white-space:nowrap;height:28px;padding:0 12px;border-radius:999px;background:var(--navy);
+  color:#fff;font:700 12px/28px var(--f-t);letter-spacing:.04em}
+.geroi__belezhki{position:absolute;inset:0;z-index:3;pointer-events:none}
+.geroi__dolu{grid-row:3;display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:32px;align-items:end;padding-bottom:clamp(18px,3vh,32px);position:relative;z-index:3;pointer-events:none}
+.geroi__pr{display:flex;align-items:flex-start;font:600 clamp(54px,6vw,92px)/.8 var(--f-d);letter-spacing:-.06em;color:var(--navy);font-variant-numeric:tabular-nums;min-width:2.6em}
+.geroi__pr span{font-size:.36em;margin-top:.12em;margin-left:2px;color:var(--sky)}
+.geroi__etap{display:flex;flex-direction:column;gap:6px;padding-bottom:4px}
+.geroi__etap small{font:600 12px/1 var(--f-t);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.geroi__etap b{font:500 clamp(18px,1.6vw,24px)/1.1 var(--f-d);letter-spacing:-.025em;min-width:min(12ch,100%)}
+.geroi__podskazka{justify-self:start;display:flex;align-items:center;gap:12px;font-size:13.5px;color:var(--ink-3);max-width:330px;padding-bottom:6px;margin-left:auto;margin-right:260px}
+.mishka{flex:none;width:22px;height:34px;border-radius:12px;box-shadow:inset 0 0 0 1.75px currentColor;position:relative}
+.mishka::after{content:'';position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:currentColor;animation:mishka 1.8s var(--izh) infinite}
+@keyframes mishka{0%{transform:translateY(0);opacity:1}70%{transform:translateY(9px);opacity:0}100%{opacity:0}}
+.geroi__lenta{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--line);z-index:3}
+.geroi__lenta i{position:absolute;inset:0;background:var(--sky);transform-origin:left;transform:scaleX(var(--p,0))}
+
+/* промото на процеса */
+.proces-promo{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0;margin-top:clamp(40px,5vw,72px);border-radius:var(--r-xl);overflow:hidden;background:var(--navy);color:#fff;
+  box-shadow:var(--sen-2);transition:transform .6s var(--izh)}
+.proces-promo:hover{transform:translateY(-4px)}
+.proces-promo__t{display:flex;flex-direction:column;gap:18px;align-items:flex-start;padding:clamp(28px,4vw,56px)}
+.proces-promo__t h3{color:#fff}
+.proces-promo__t p{color:color-mix(in oklch,#fff 74%,var(--navy));max-width:420px}
+.proces-promo__t .etiket{color:color-mix(in oklch,#fff 70%,var(--navy))}
+.proces-promo__kadar{position:relative;background:var(--paper);margin:10px;border-radius:calc(var(--r-xl) - 10px);overflow:hidden}
+.proces-promo__kadar img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--izh)}
+.proces-promo:hover .proces-promo__kadar img{transform:scale(1.04)}
+.proces-promo--tamno{background:var(--navy-2);margin-top:0}
+
+/* промото на конструктора */
+.konstr-promo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 72px;align-items:center}
+.konstr-promo__t{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.konstr-promo__vizual{position:relative;display:flex;flex-wrap:wrap;gap:10px;padding:clamp(24px,3vw,40px);border-radius:var(--r-xl);background:var(--navy-2)}
+.konstr-chip{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 18px 0 8px;border-radius:999px;background:rgb(255 255 255/.06);color:color-mix(in oklch,#fff 84%,var(--navy));
+  font-weight:700;font-size:15px;transition:background .5s,color .5s}
+.konstr-chip svg{width:30px;height:30px;padding:6px;border-radius:50%;background:rgb(255 255 255/.08);color:transparent;transition:all .5s}
+.konstr-chip.vkl{background:var(--sky);color:var(--navy)}
+.konstr-chip.vkl svg{background:var(--navy);color:var(--sky)}
+.konstr-cena{width:100%;margin-top:14px;padding:22px;border-radius:var(--r-l);background:#fff;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.konstr-cena small{font-size:12.5px;color:var(--ink-3);font-weight:600}
+.konstr-cena b{font:600 clamp(26px,2.6vw,38px)/1.05 var(--f-d);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+
+@media (min-width:981px) and (max-height:860px){
+  .geroi__tekst{padding-top:92px;gap:14px 48px}
+  .geroi__h1{font-size:clamp(34px,min(4.6vw,6.6vh),70px)}
+  .geroi__pod{gap:14px}
+  .geroi__pod p{font-size:15.5px}
+  .geroi__pod .btn{height:50px}
+  .geroi__pr{font-size:clamp(46px,min(6vw,9vh),92px)}
+}
+@media (max-width:980px){
+  .geroi{height:380vh}
+  .geroi__tekst{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:92px}
+  .geroi__pod p{font-size:15.5px}
+  /* fix 14: the booking button was hidden on tablets and phones */
+  .geroi__pod .btn-red{display:flex;gap:10px}
+  .geroi__pod .btn{height:50px}
+  .geroi__dolu{grid-template-columns:auto minmax(0,1fr);gap:18px}
+  .geroi__podskazka{display:none}
+  .proces-promo,.konstr-promo{grid-template-columns:minmax(0,1fr)}
+  .proces-promo__kadar{aspect-ratio:4/3;order:-1}
+}
+@media (max-width:640px){
+  .geroi__h1{font-size:clamp(34px,10vw,48px)}
+  .geroi__dolu{padding-bottom:52px}
+  .bel3d{height:26px;font-size:11px;padding:0 10px 0 5px}
+  .bel3d i{width:15px;height:15px}
+  .geroi__pod p{max-width:none}
+  .geroi__pod .btn-red .btn--linia{display:none}   /* the call button is already in the header */
+  .geroi__pod .btn-red .btn{flex:1 1 auto;justify-content:space-between}
+  .geroi__pr{font-size:52px}
+}
+@media (max-width:400px){
+  .geroi__dolu{gap:12px}
+  .geroi__pr{font-size:42px}
+  .geroi__etap b{font-size:15px}
+  .geroi__etap small{font-size:10.5px}
+}
+
+/* fix 18: hide the lens when the pointer leaves the model (class set by popravki.js) */
+.geroi__leshta.vidima.van{opacity:0;transform:translate(var(--x),var(--y)) scale(.6)}
+
+/* ================= mobile pass ================= */
+@media (max-width:980px){
+  .geroi{height:260vh}                                  /* 0-100% renovation over less scrolling */
+}
+@media (max-width:640px){
+  .bel3d{font-size:12px}
+  .geroi__etap small{font-size:11.5px}
+  /* Основа / Форма / Детайли / Топлина: the 3D object sat on the text; give it the top part, the text a backing */
+  .ozhivyava__platno{bottom:40%}
+  .ozh-info{left:12px;right:12px;bottom:52px;padding:16px 18px;border-radius:var(--r-l);
+    background:rgb(255 255 255/.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .ozh-tamno .ozh-info{background:rgb(36 52 92/.86)}
+}
+
+/* ================= hero redesign ================= */
+/* "не мислите" in the yellow accent colour */
+.geroi__h1 .red:nth-child(2) > span{color:var(--zhalto);-webkit-text-stroke:.06em #111;paint-order:stroke fill}
+/* soft yellow glow under the 3D model */
+.geroi__scena::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(var(--gw,30%) var(--gh,24%) at var(--gx,50%) var(--gy,60%),rgb(209 254 23/.62),rgb(209 254 23/.22) 48%,transparent 72%),
+             radial-gradient(calc(var(--gw,30%) * .55) calc(var(--gh,24%) * .55) at calc(var(--gx,50%) + 9%) calc(var(--gy,60%) - 10%),rgb(209 254 23/.32),transparent 70%);transition:background-position .3s}
+@media (min-width:981px){
+  /* heading stays the only thing in the top block (the 3D code places the model below it);
+     description and buttons are pinned just above the % widget */
+  .geroi__tekst{position:static;padding-bottom:clamp(10px,3vh,40px)}  /* the 3D code fits the model between this block and the % row */
+  .geroi__h1{position:relative;z-index:3;font-size:clamp(44px,6.6vw,94px)}
+  .geroi__dolu{padding-top:28px}   /* keeps the model's bottom tip off the scroll hint */
+  .geroi__pod{position:absolute;z-index:3;left:calc((100% - min(var(--shir) + 2*var(--pole),100%)) / 2 + var(--pole));
+    bottom:calc(clamp(18px,3vh,32px) + clamp(54px,6vw,92px) * .8 + clamp(22px,3.4vh,40px))}
+  /* the model moves right and grows slightly */
+  .geroi__scena{left:22%;right:-8%;top:-4%;bottom:-4%}
+}
+
+/* hero only: light polished-cement background (generated SVG noise, no image file) */
+.geroi__sc{
+  background-color:#e5e4e0;
+  background-image:
+    /* soft light in the middle so the text and model stay clear */
+    radial-gradient(90% 70% at 45% 45%,rgb(255 255 255/.55),rgb(255 255 255/0) 70%),
+    /* fine grain */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2  0 0 0 0 .2  0 0 0 0 .2  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+    /* larger cloudy patches of a trowelled surface */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1000'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025 .004' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .35  0 0 0 0 .34  0 0 0 .9 -.32'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  background-size:auto,240px 240px,cover;background-repeat:no-repeat,repeat,no-repeat;
+}
+/* small hero texts a shade darker on the cement */
+.geroi__pod p,.geroi__podskazka,.geroi__etap small{color:var(--ink-2)}
+.geroi__pod .btn--linia{background:rgb(255 255 255/.6)}
+
+/* load the 3D directly: the photo is only a fallback (no WebGL, or 3D not ready after 8s) */
+.geroi__poster{opacity:0}
+.geroi__scena.bez-3d .geroi__poster,.geroi__scena.kasno:not(.zhivo) .geroi__poster{opacity:1}
+
+/* phones: hero 3D labels follow the model exactly (no 0.35s position lag), stay on screen,
+   and fade out while the page is being scrolled fast (class set by popravki.js) */
+@media (max-width:980px){
+  .bel3d,.bel3d.vid{transition:opacity .25s;
+    transform:translate(clamp(70px,var(--x),calc(100vw - 70px)),var(--y)) translate(-50%,-50%)}
+  .geroi__belezhki.brzo .bel3d{opacity:0}
+}</style>
 <script>document.documentElement.classList.add('js')</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Ремонт Студио","legalName":"РЕМОНТ СТУДИО ЕООД","slogan":"Ремонти на жилища във Варна","telephone":"+359880000000","email":"kontakt@remont-studio.test","areaServed":"Варна и региона","url":"https://remont-studio.test","address":{"@type":"PostalAddress","addressLocality":"Варна","postalCode":"9000","addressCountry":"BG"},"sameAs":["#","#"]}</script>
@@ -33,7 +199,7 @@
 <body>
 <a class="skrito" href="#sadarzhanie">Към съдържанието</a>
 <header class="glava" id="glava">
-  <a class="glava__logo" href="/" aria-label="Ремонт Студио, начало"><img src="/assets/img/logo/logo-firma-600.png" alt="Ремонт Студио: Ремонти на жилища във Варна" width="600" height="123"></a>
+  <a class="glava__logo" href="/" aria-label="Ремонт Студио, начало"><img src="/assets/img/logo/logo-firma-300.png" srcset="/assets/img/logo/logo-firma-300.png 300w, /assets/img/logo/logo-firma-600.png 600w" sizes="170px" alt="Ремонт Студио: Ремонти на жилища във Варна" width="600" height="123"></a>
   <ul class="glava__nav"><li><button class="nav-v mm-btn" type="button" aria-expanded="false" aria-controls="mega">Услуги<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></li><li><a class="nav-v" href="/proces/">Процес <span class="znak">3D</span></a></li><li><a class="nav-v" href="/konstruktor/">Конструктор <span class="znak">цена</span></a></li><li><a class="nav-v" href="/zavarsheni-obekti/">Обекти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a><div class="padashto"><a href="/zavarsheni-obekti/">Завършени обекти<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a><a href="/galeriya/">Галерия<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a></div></li><li><a class="nav-v" href="/za-nas/">За нас</a></li><li><a class="nav-v" href="/blog/">Блог</a></li><li><a class="nav-v" href="/kontakti/">Контакти</a></li><li aria-hidden="true" class="glava__hapche"></li></ul>
   <div class="glava__desno">
     <a class="glava__tel" href="tel:+359880000000" aria-label="Обадете се на 088 000 0000"><span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 6.9 6.9l1.3-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4Z"/></svg></span><span>088 000 0000</span></a>
@@ -63,8 +229,10 @@
   </nav>
   <div class="btn-red">
     <a class="btn btn--tel" href="tel:+359880000000"><span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.2l1.6 4-2 1.3a10.5 10.5 0 0 0 6.9 6.9l1.3-2 4 1.6V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4Z"/></svg></span>088 000 0000</a>
-    <a class="btn btn--nebe" href="viber://chat/?number=%2B359880000000">Пишете във Viber <span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c5 0 8 2.6 8 7.7 0 5.2-3.2 7.4-8 7.4-.8 0-1.6-.1-2.4-.2L6 20.5v-3.5C4.6 15.7 4 13.6 4 10.7 4 5.6 7 3 12 3Z"/><path d="M9.3 8.2c.4-.5 1-.4 1.3.1l.6 1c.2.4.1.9-.3 1.2l-.3.2c.4 1 1.2 1.8 2.2 2.2l.2-.3c.3-.4.8-.5 1.2-.3l1 .6c.5.3.6.9.1 1.3-.7.7-1.7.9-2.6.5a7.6 7.6 0 0 1-3.9-3.9c-.4-.9-.2-1.9.5-2.6Z"/></svg></span></a>
+    <a class="btn btn--nebe" href="viber://chat/?number=%2B359880000000">Viber <span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c5 0 8 2.6 8 7.7 0 5.2-3.2 7.4-8 7.4-.8 0-1.6-.1-2.4-.2L6 20.5v-3.5C4.6 15.7 4 13.6 4 10.7 4 5.6 7 3 12 3Z"/><path d="M9.3 8.2c.4-.5 1-.4 1.3.1l.6 1c.2.4.1.9-.3 1.2l-.3.2c.4 1 1.2 1.8 2.2 2.2l.2-.3c.3-.4.8-.5 1.2-.3l1 .6c.5.3.6.9.1 1.3-.7.7-1.7.9-2.6.5a7.6 7.6 0 0 1-3.9-3.9c-.4-.9-.2-1.9.5-2.6Z"/></svg></span></a>
   </div>
+  <a class="btn btn--zhalto mob-menyu__cta" href="/kontakti/#forma">Безплатна консултация <span class="krag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+
 </div>
 <div class="ryb" aria-hidden="true"><div class="ryb__pista"></div><div class="ryb__boya"></div>
   <button class="ryb__valyak" type="button" tabindex="-1" title="Нагоре"><svg viewBox="0 0 30 46"><rect class="valec" x="1" y="1" width="28" height="13" rx="5" fill="#4CACD8" stroke="#24345C" stroke-width="1.5"/><path d="M15 14v6h-9v8h9" fill="none" stroke="#24345C" stroke-width="2"/><rect x="11" y="27" width="8" height="18" rx="3" fill="#24345C"/></svg></button></div>
@@ -82,7 +250,7 @@
         </div>
       </div>
     </div>
-    <div class="geroi__scena" id="geroi-scena">
+    <div class="geroi__scena" id="geroi-scena"><script data-sw-check>(()=>{try{const g=document.createElement("canvas").getContext("webgl2",{failIfMajorPerformanceCaveat:!0});let sw=!g;if(g){const x=g.getExtension("WEBGL_debug_renderer_info");sw=/swiftshader|llvmpipe|softpipe|software/i.test(x?g.getParameter(x.UNMASKED_RENDERER_WEBGL):"");const l=g.getExtension("WEBGL_lose_context");l&&l.loseContext()}if(sw)document.getElementById("geroi-scena").classList.add("bez-3d")}catch{}})()</script>
       <img class="geroi__poster" src="/assets/img/uslugi/u-tsyalosten-1280.webp" srcset="/assets/img/uslugi/u-tsyalosten-2048.webp 2048w, /assets/img/uslugi/u-tsyalosten-1280.webp 1280w, /assets/img/uslugi/u-tsyalosten-960.webp 960w, /assets/img/uslugi/u-tsyalosten-640.webp 640w" sizes="(max-width: 980px) 100vw, 1100px" alt="Двустаен апартамент в разрез: половината още в ремонт, половината завършена" width="2048" height="1536" fetchpriority="high">
       <div class="geroi__leshta" aria-hidden="true"><span>След ремонта</span></div>
       <div class="geroi__belezhki" aria-hidden="true"></div>
@@ -96,19 +264,19 @@
 </section>
 
 <section class="sek s-fon" aria-label="Мисията">
-  <div class="fon-duma" data-fon-duma style="top:6%">Спокойствие</div>
+  <div class="fon-duma" data-fon-duma aria-hidden="true" style="top:6%" data-t="Спокойствие"></div>
   <div class="obv">
     <span class="etiket vlez">Ремонти на жилища във Варна</span>
     <p class="izrechenie vlez" style="margin-top:28px">Създадохме Ремонт Студио с една основна мисия: да освободим клиентите си от тежестта на ремонта
       <span class="stiker stiker--snimka" style="--rot:-4deg"><img src="/assets/img/obekti/dvustaen-apartament-v-tsentara-na-varna-2-640.webp" alt="" loading="lazy"></span>,
-      като поемем пълната отговорност <span class="tiho">за всеки детайл</span> <span class="stiker stiker--pr" style="--rot:6deg"><img src="/assets/img/predmeti/chuk-160.webp" alt="" loading="lazy"></span>,
+      като поемем пълната отговорност <span class="tiho">за всеки детайл</span> <span class="stiker stiker--pr" style="--rot:6deg"><img src="/assets/img/predmeti/chuk-160.webp" alt="" width="160" height="160" loading="lazy"></span>,
       от първата консултация <span class="stiker stiker--tekst" style="--rot:-3deg">оглед · 0 €</span>
-      до финалното почистване <span class="stiker stiker--pr" style="--rot:-8deg"><img src="/assets/img/predmeti/sprei-160.webp" alt="" loading="lazy"></span>.</p>
+      до финалното почистване <span class="stiker stiker--pr" style="--rot:-8deg"><img src="/assets/img/predmeti/sprei-160.webp" alt="" width="160" height="160" loading="lazy"></span>.</p>
   </div>
 </section>
 
 <section class="sek" aria-label="Числата" style="padding-top:0">
-  <div class="obv"><div class="chisla" data-chisla>
+  <div class="obv"><h2 class="skrito">Ремонт Студио в числа</h2><div class="chisla" data-chisla>
   <article class="chislo chislo--navy vlez"><div class="chislo__gore"><span>Процесът</span><span>01</span></div>
     <div class="chislo__n"><span data-broi="5">5</span><small>стъпки</small></div><div class="chislo__gr gr gr--stapki"><svg viewBox="0 0 260 120" aria-hidden="true"><path class="gr-pat" d="M10 96 C 60 96, 60 30, 110 30 S 160 96, 205 70 S 240 24, 250 24" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-width="2" stroke-dasharray="4 6"/>
     <g class="gr-vazel" style="--i:0"><circle cx="10" cy="96" r="11" fill="#4CACD8"/><text x="10" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#24345C" font-family="Manrope">1</text></g><g class="gr-vazel" style="--i:1"><circle cx="70" cy="52" r="11" fill="#4CACD8"/><text x="70" y="56" text-anchor="middle" font-size="11" font-weight="700" fill="#24345C" font-family="Manrope">2</text></g><g class="gr-vazel" style="--i:2"><circle cx="130" cy="44" r="11" fill="#4CACD8"/><text x="130" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="#24345C" font-family="Manrope">3</text></g><g class="gr-vazel" style="--i:3"><circle cx="195" cy="74" r="11" fill="#4CACD8"/><text x="195" y="78" text-anchor="middle" font-size="11" font-weight="700" fill="#24345C" font-family="Manrope">4</text></g><g class="gr-vazel" style="--i:4"><circle cx="250" cy="24" r="11" fill="#4CACD8"/><text x="250" y="28" text-anchor="middle" font-size="11" font-weight="700" fill="#24345C" font-family="Manrope">5</text></g>
@@ -132,7 +300,7 @@
 <div class="lenta " data-lenta aria-label="Изкъртване, Дограма, ВиК, Ел. инсталации, Замазки, Плочки, Боя, Паркет, Осветление, Обзавеждане, Почистване, Готово за нанасяне"><div class="lenta__vlak"><div class="lenta__gr"><span class="lenta__duma">Изкъртване</span><img class="lenta__pr" src="/assets/img/predmeti/chuk-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Дограма</span><img class="lenta__pr" src="/assets/img/predmeti/prozorets-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">ВиК</span><img class="lenta__pr" src="/assets/img/predmeti/smesitel-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Ел. инсталации</span><img class="lenta__pr" src="/assets/img/predmeti/kontakt-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Замазки</span><img class="lenta__pr" src="/assets/img/predmeti/malaj-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Плочки</span><img class="lenta__pr" src="/assets/img/predmeti/plochki-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Боя</span><img class="lenta__pr" src="/assets/img/predmeti/valyak-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Паркет</span><img class="lenta__pr" src="/assets/img/predmeti/parket-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Осветление</span><img class="lenta__pr" src="/assets/img/predmeti/lampa-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Обзавеждане</span><img class="lenta__pr" src="/assets/img/predmeti/fotyoil-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Почистване</span><img class="lenta__pr" src="/assets/img/predmeti/sprei-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Готово за нанасяне</span><img class="lenta__pr" src="/assets/img/predmeti/klyuch-vrata-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div><div class="lenta__gr" aria-hidden="true"><span class="lenta__duma">Изкъртване</span><img class="lenta__pr" src="/assets/img/predmeti/chuk-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Дограма</span><img class="lenta__pr" src="/assets/img/predmeti/prozorets-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">ВиК</span><img class="lenta__pr" src="/assets/img/predmeti/smesitel-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Ел. инсталации</span><img class="lenta__pr" src="/assets/img/predmeti/kontakt-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Замазки</span><img class="lenta__pr" src="/assets/img/predmeti/malaj-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Плочки</span><img class="lenta__pr" src="/assets/img/predmeti/plochki-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Боя</span><img class="lenta__pr" src="/assets/img/predmeti/valyak-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Паркет</span><img class="lenta__pr" src="/assets/img/predmeti/parket-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Осветление</span><img class="lenta__pr" src="/assets/img/predmeti/lampa-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Обзавеждане</span><img class="lenta__pr" src="/assets/img/predmeti/fotyoil-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma lenta__duma--kontur">Почистване</span><img class="lenta__pr" src="/assets/img/predmeti/sprei-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span class="lenta__duma">Готово за нанасяне</span><img class="lenta__pr" src="/assets/img/predmeti/klyuch-vrata-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"></div></div></div>
 
 <section class="sek s-fon" id="uslugi" aria-label="Услугите">
-  <div class="fon-duma" data-fon-duma style="top:2%">Услуги</div>
+  <div class="fon-duma" data-fon-duma aria-hidden="true" style="top:2%" data-t="Услуги"></div>
   <div class="obv">
     <div class="glava-sek">
       <span class="etiket">Услуги</span>
@@ -209,7 +377,7 @@
 </section>
 
 <section class="sek s-fon" aria-label="Как работим">
-  <div class="fon-duma" data-fon-duma style="top:4%">Как работим</div>
+  <div class="fon-duma" data-fon-duma aria-hidden="true" style="top:4%" data-t="Как работим"></div>
   <div class="obv">
     <div class="glava-sek">
       <span class="etiket">Пет стъпки</span>
@@ -260,7 +428,7 @@
 </section>
 
 <section class="sek sek--tamno s-fon" aria-label="Конструктор на ремонта">
-  <div class="fon-duma" data-fon-duma style="top:8%">Конструктор</div>
+  <div class="fon-duma" data-fon-duma aria-hidden="true" style="top:8%" data-t="Конструктор"></div>
   <div class="obv">
     <div class="konstr-promo">
       <div class="konstr-promo__t">
@@ -362,12 +530,12 @@
         <a class="podval__logo" href="/"><img src="/assets/img/logo/logo-firma-600.png" alt="Ремонт Студио" width="600" height="123" loading="lazy"></a>
         <p class="podval__moto">Ремонти на жилища във Варна.</p>
       </div>
-      <div><h4>Услуги</h4><ul><li><a href="/uslugi/tsyalosten-remont-na-zhilishte/">Цялостен ремонт на жилище</a></li><li><a href="/uslugi/remont-na-banya/">Ремонт на баня</a></li><li><a href="/uslugi/vanshna-toploizolatsiya-i-obnovyavane-na-fasadi/">Външна топлоизолация и обновяване на фасади</a></li><li><a href="/uslugi/remont-na-pokrivi-i-hidroizolatsiya/">Ремонт на покриви и хидроизолация</a></li><li><a href="/konstruktor/">Конструктор на ремонта</a></li></ul></div>
-      <div><h4>Ремонт Студио</h4><ul>
+      <div><h2>Услуги</h2><ul><li><a href="/uslugi/tsyalosten-remont-na-zhilishte/">Цялостен ремонт на жилище</a></li><li><a href="/uslugi/remont-na-banya/">Ремонт на баня</a></li><li><a href="/uslugi/vanshna-toploizolatsiya-i-obnovyavane-na-fasadi/">Външна топлоизолация и обновяване на фасади</a></li><li><a href="/uslugi/remont-na-pokrivi-i-hidroizolatsiya/">Ремонт на покриви и хидроизолация</a></li><li><a href="/konstruktor/">Конструктор на ремонта</a></li></ul></div>
+      <div><h2>Ремонт Студио</h2><ul>
         <li><a href="/za-nas/">За нас</a></li><li><a href="/kak-rabotim/">Как работим</a></li><li><a href="/proces/">Процесът в 3D</a></li>
         <li><a href="/zavarsheni-obekti/">Завършени обекти</a></li><li><a href="/galeriya/">Галерия</a></li><li><a href="/blog/">Блог</a></li><li><a href="/kontakti/">Контакти</a></li>
       </ul></div>
-      <div><h4>Контакти</h4>
+      <div><h2>Контакти</h2>
         <a class="podval__tel" href="tel:+359880000000">088 000 0000</a>
         <ul><li><a href="viber://chat/?number=%2B359880000000">Viber</a></li><li><a href="mailto:kontakt@remont-studio.test">kontakt@remont-studio.test</a></li><li><span>Варна и региона</span></li>
         <li><a href="#" target="_blank" rel="noopener">Facebook</a> · <a href="#" target="_blank" rel="noopener">Instagram</a></li></ul>
@@ -382,7 +550,7 @@
   <div class="podval__ime" aria-hidden="true"><span>Р</span><span>Е</span><span>М</span><span>О</span><span>Н</span><span>Т</span><span>&nbsp;</span><span>С</span><span>Т</span><span>У</span><span>Д</span><span>И</span><span>О</span></div>
 </footer>
 <script src="/assets/js/osnova.js?v=01fb5d91" defer></script>
-<script src="/assets/js/nachalo.js?v=9e9a446b" defer></script>
+<script src="/assets/js/nachalo.js?v=8f18fec0" defer></script>
 <script src="/assets/js/popravki.js?v=37f80a2b" defer></script>
 </body>
 </html>

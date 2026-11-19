@@ -4,8 +4,8 @@
 :root{
   --navy:#24345C; --sky:#4CACD8; --zhalto:#D1FE17; --paper:#F3F5F8; --white:#fff;
   --ink:color-mix(in oklch,var(--navy) 86%,black);
-  --ink-2:color-mix(in oklch,var(--navy) 66%,var(--paper));
-  --ink-3:color-mix(in oklch,var(--navy) 44%,var(--paper));
+  --ink-2:color-mix(in oklch,var(--navy) 74%,var(--paper));
+  --ink-3:color-mix(in oklch,var(--navy) 69%,var(--paper));
   --line:color-mix(in oklch,var(--navy) 11%,var(--paper));
   --line-2:color-mix(in oklch,var(--navy) 20%,var(--paper));
   --sky-soft:color-mix(in oklch,var(--sky) 15%,var(--paper));
@@ -377,7 +377,7 @@ ul{margin:0;padding:0;list-style:none}
 .podval__moto{font:500 clamp(26px,2.6vw,38px)/1.12 var(--f-d);letter-spacing:-.03em;color:#fff;max-width:420px}
 .podval__logo{display:inline-block;background:#fff;border-radius:16px;padding:12px 16px;margin-bottom:26px}
 .podval__logo img{height:38px;width:auto}
-.podval h4{font:600 12.5px/1 var(--f-t);letter-spacing:.1em;text-transform:uppercase;color:color-mix(in oklch,#fff 52%,var(--navy));margin-bottom:18px}
+.podval h2,.podval h4{font:600 12.5px/1 var(--f-t);letter-spacing:.1em;text-transform:uppercase;color:color-mix(in oklch,#fff 52%,var(--navy));margin-bottom:18px}
 .podval li + li{margin-top:10px}
 .podval li a,.podval li span{font-size:15.5px}
 .podval__tel{font:500 26px/1 var(--f-d);letter-spacing:-.03em;color:#fff;display:inline-block;margin-bottom:12px}
@@ -639,3 +639,33 @@ html{overflow-x:clip}                                   /* a 1px marquee overflo
 .izbor-chip button[aria-pressed="true"]{background:var(--navy);color:#fff}
 .forma__bel{font-size:13px;color:var(--ink-3);margin:0}
 .forma__btn{width:100%;justify-content:space-between;height:60px;font-size:16px}
+
+/* phones: "Основа / Форма / Детайли / Топлина" sat in the middle of the screen, behind the text card.
+   Move it to the top part (behind the 3D object) and size it so the longest word fits the width. */
+@media (max-width:640px){
+  .ozh-ekran{justify-content:flex-start;padding-top:calc(78px + 3svh)}
+  .ozh-duma{font-size:min(15.5vw,80px)}
+}
+
+/* phones: compact menu that fits the screen, with the main call to action at the bottom */
+.mob-menyu{padding:84px var(--pole) 20px;gap:14px}
+.mob-menyu nav a{padding:9px 0;font-size:19px}
+.mob-menyu nav a small{font-size:11.5px}
+.mob-menyu .btn-red{margin-top:auto;gap:8px;flex-wrap:nowrap}
+.mob-menyu .btn-red .btn{flex:1 1 0;min-width:0;height:46px;font-size:13.5px;gap:8px;white-space:nowrap}
+.mob-menyu .btn-red .btn--nebe{padding-left:16px}
+.mob-menyu .btn-red .btn .krag{width:32px;height:32px}
+.mob-menyu .btn-red .btn .krag svg{width:15px;height:15px}
+.mob-menyu .btn-red .btn::before{width:32px;height:32px;margin-top:-16px}
+.mob-menyu__cta{flex:none;height:52px;justify-content:space-between;font-size:15.5px}
+
+/* PageSpeed contrast pass: small text must reach 4.5:1, large numbers 3:1 */
+.znak{background:var(--navy)}
+.stapka__n{color:var(--sky-deep)}
+.u-karta--nebe .u-karta__nomer,.u-karta--nebe p,.u-karta--nebe .chip{color:var(--navy);opacity:1}
+/* article sections that were h3 directly under the h1 are now h2 (heading order); keep their old look */
+.proza h2.kato-h3{font-size:clamp(20px,1.6vw,24px);letter-spacing:-.02em;line-height:1.25;margin-top:1.6em}
+@media (max-width:640px){.proza h2.kato-h3{font-size:clamp(16px,4.6vw,20px)}}
+.chislo--nebe .chislo__gore span,.chislo--nebe .chislo__ime + p{color:var(--navy);opacity:1}
+.fon-duma[data-t]::before{content:attr(data-t)}
+.chislo--nebe .chislo__gore{opacity:1;color:var(--navy)}

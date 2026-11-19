@@ -34,3 +34,16 @@ The 3D pages stay heavy (about 2 MB, long main-thread tasks): each page ships it
 slimming those needs the original source code, not the minified bundles.
 Headless Lighthouse renders WebGL on the CPU (SwiftShader), which overstates the
 blocking time compared with a real phone GPU.
+
+## PageSpeed pass (no graphics card)
+PageSpeed Insights runs Chrome without a GPU, so WebGL is drawn in software (SwiftShader). The 3D
+then blocked the page for 9.4 s (desktop) / 3.7 s (mobile): desktop 61, mobile 41.
+- The three 3D scripts now refuse software rendering (`failIfMajorPerformanceCaveat` plus a renderer
+  name check) and fall back to the existing still image (`.bez-3d`). Devices with a GPU are unchanged.
+- The homepage runs the same check inline in the hero, so the photo is shown from the first paint.
+- `nachalo.css` is inlined into the homepage by `speed.py build` (refreshed on every run).
+- Contrast: `--ink-2`/`--ink-3` darkened, sky-card text full navy, step numbers in `--sky-deep`;
+  outlined background words are drawn with `::before` (decorative). Heading levels fixed site-wide.
+- Header logo has a 300px copy; sticker images have width/height.
+Local Lighthouse, software WebGL: desktop 94 (TBT 0 ms); mobile 94 with real throttling
+(LCP 2.4 s). Accessibility 100, Best practices 100. SEO 66 is only the `noindex` tag, kept on purpose.

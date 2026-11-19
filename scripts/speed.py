@@ -60,6 +60,7 @@ def images_960():
 def build():
     names = images_960()
     font_css = open(os.path.join(ASSETS, 'css', 'shriftove.css'), encoding='utf8').read().replace('url(../fonts/', 'url(/assets/fonts/')
+    home_css = open(os.path.join(ASSETS, 'css', 'nachalo.css'), encoding='utf8').read().strip()
     for name, (old, new) in DENSITY.items():
         p = os.path.join(ASSETS, 'js', name)
         t = open(p, encoding='utf8').read()
@@ -82,6 +83,10 @@ def build():
                 t = t.replace(a, f'{a}, {b}')
         # the 700-byte @font-face file was a separate render-blocking request: inline it
         t = re.sub(r'<link rel="stylesheet" href="/assets/css/shriftove\.css(\?v=[0-9a-f]+)?">', lambda m: f'<style>{font_css}</style>', t)
+        # the homepage-only stylesheet (5 KB gzipped) blocked the first paint as a separate request:
+        # inline it; the marked <style> is refreshed from the file on every run
+        t = re.sub(r'<link rel="stylesheet" href="/assets/css/nachalo\.css(\?v=[0-9a-f]+)?">|<style data-inline="nachalo\.css">.*?</style>',
+                   lambda m: f'<style data-inline="nachalo.css">{home_css}</style>', t, flags=re.S)
         # content-based version tags on every CSS/JS reference
         for rel, h in hashes.items():
             t = re.sub(re.escape(rel) + r'(\?v=[0-9a-f]+)?(?=["\'])', f'{rel}?v={h}', t)
