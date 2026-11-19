@@ -165,7 +165,7 @@
     const sec = w.parentElement;
     const obv = sec.querySelector(':scope > .obv');
     w.style.fontSize = ''; w.style.top = w.dataset.top; sec.style.paddingTop = '';
-    if (!mq.matches) return;
+    if (!mq.matches || getComputedStyle(w).display === 'none') return;
     const avail = w.clientWidth - 24;
     const size = parseFloat(getComputedStyle(w).fontSize);
     if (w.scrollWidth > avail) w.style.fontSize = `${Math.floor(size * avail / w.scrollWidth)}px`;

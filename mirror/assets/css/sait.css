@@ -617,3 +617,5 @@ html{overflow-x:clip}                                   /* a 1px marquee overflo
 }
 /* phones: the outlined background words are sized to fit the screen (popravki.js) and do not slide sideways */
 @media (max-width:640px){.fon-duma{transform:none!important;text-align:center;padding-inline:12px}}
+/* phones: no outlined "Как работим" word behind the "Как работим?" heading */
+@media (max-width:640px){[aria-label="Как работим"] > .fon-duma{display:none}}
