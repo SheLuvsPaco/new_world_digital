@@ -137,3 +137,19 @@
   /* the model moves right and grows slightly */
   .geroi__scena{left:22%;right:-8%;top:-4%;bottom:-4%}
 }
+
+/* hero only: light polished-cement background (generated SVG noise, no image file) */
+.geroi__sc{
+  background-color:#e5e4e0;
+  background-image:
+    /* soft light in the middle so the text and model stay clear */
+    radial-gradient(90% 70% at 45% 45%,rgb(255 255 255/.55),rgb(255 255 255/0) 70%),
+    /* fine grain */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2  0 0 0 0 .2  0 0 0 0 .2  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
+    /* larger cloudy patches of a trowelled surface */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='1000'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025 .004' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .35  0 0 0 0 .34  0 0 0 .9 -.32'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  background-size:auto,240px 240px,cover;background-repeat:no-repeat,repeat,no-repeat;
+}
+/* small hero texts a shade darker on the cement */
+.geroi__pod p,.geroi__podskazka,.geroi__etap small{color:var(--ink-2)}
+.geroi__pod .btn--linia{background:rgb(255 255 255/.6)}
