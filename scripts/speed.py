@@ -18,7 +18,7 @@ from PIL import Image
 
 ROOT = os.path.join(os.path.dirname(__file__), '..', 'mirror')
 ASSETS = os.path.join(ROOT, 'assets')
-DELAYED = ['nachalo.js', 'proces.js', 'konstruktor.js']
+DELAYED = ['proces.js', 'konstruktor.js']  # homepage 3D (nachalo.js) starts right away
 DENSITY = {  # file: (original, replacement)
     'nachalo.js': ('gu(s,{gastota:n?2:1.75})', 'gu(s,{gastota:n?1.5:1.75})'),
     'proces.js': ('{alpha:!1,gastota:HM()?2:1.6}', '{alpha:!1,gastota:HM()?1.5:1.6}'),

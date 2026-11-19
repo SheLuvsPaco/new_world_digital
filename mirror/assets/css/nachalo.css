@@ -153,3 +153,7 @@
 /* small hero texts a shade darker on the cement */
 .geroi__pod p,.geroi__podskazka,.geroi__etap small{color:var(--ink-2)}
 .geroi__pod .btn--linia{background:rgb(255 255 255/.6)}
+
+/* load the 3D directly: the photo is only a fallback (no WebGL, or 3D not ready after 8s) */
+.geroi__poster{opacity:0}
+.geroi__scena.bez-3d .geroi__poster,.geroi__scena.kasno:not(.zhivo) .geroi__poster{opacity:1}

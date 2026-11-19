@@ -12,6 +12,7 @@
   const scena = $('#geroi-scena');
   const leshta = $('.geroi__leshta');
   if (scena) {
+    setTimeout(() => scena.classList.add('kasno'), 8000); // show the photo only if the 3D is very late
     // the labels sit inside the floor; the model extends this far beyond them (calibrated)
     const PAD = { l: .33, r: .33, t: .45, b: .65 };
     const model = () => {
