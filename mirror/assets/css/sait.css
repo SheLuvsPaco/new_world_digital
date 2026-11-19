@@ -615,3 +615,5 @@ html{overflow-x:clip}                                   /* a 1px marquee overflo
   /* the inline sticker in the mission text dropped to 8px */
   .stiker--tekst{font-size:max(11px,.34em)}
 }
+/* phones: the outlined background words are sized to fit the screen (popravki.js) and do not slide sideways */
+@media (max-width:640px){.fon-duma{transform:none!important;text-align:center;padding-inline:12px}}

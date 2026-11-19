@@ -154,3 +154,19 @@
     mo.observe(document.body, { childList: true });
   }
 })();
+
+/* Phones: size each outlined background word ("Спокойствие", "Процес"...) to fit the screen width. */
+(() => {
+  const words = [...document.querySelectorAll('[data-fon-duma]')];
+  if (!words.length) return;
+  const mq = matchMedia('(max-width: 640px)');
+  const fit = () => words.forEach((w) => {
+    w.style.fontSize = '';
+    if (!mq.matches) return;
+    const avail = w.clientWidth - 24;
+    const size = parseFloat(getComputedStyle(w).fontSize);
+    if (w.scrollWidth > avail) w.style.fontSize = `${Math.floor(size * avail / w.scrollWidth)}px`;
+  });
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
+  addEventListener('resize', fit);
+})();
