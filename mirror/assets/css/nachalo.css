@@ -10,11 +10,15 @@
 .geroi__pod{display:flex;flex-direction:column;gap:20px;padding-bottom:8px;max-width:520px}
 .geroi__pod p{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:420px}
 .geroi__pod .btn--linia svg{margin-right:-4px}
-.geroi__scena{position:absolute;inset:0;z-index:1;cursor:none}
+.geroi__scena{position:absolute;inset:0;z-index:1}
+/* cursor hidden only while the pointer is over the model (class set by popravki.js) */
+.geroi__scena.na-modela{cursor:none}
 .geroi__scena.bez-3d{cursor:auto}
 .geroi__scena canvas{position:absolute;inset:0;width:100%!important;height:100%!important;outline:none}
 .geroi__poster{position:absolute;left:4%;right:4%;top:30%;bottom:9%;width:92%;height:61%;object-fit:contain;object-position:50% 50%;transition:opacity .9s var(--izh)}
 .geroi__scena.zhivo .geroi__poster{opacity:0;pointer-events:none}
+/* soften the loading picture's box edges */
+.geroi__poster{-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent);mask-image:radial-gradient(closest-side,#000 70%,transparent)}
 .geroi__leshta{position:absolute;z-index:4;left:0;top:0;width:calc(var(--r,130px)*2);height:calc(var(--r,130px)*2);margin:calc(var(--r,130px)*-1) 0 0 calc(var(--r,130px)*-1);
   border-radius:50%;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--sky),0 22px 50px -20px rgb(20 30 60/.45);pointer-events:none;opacity:0;
   transform:translate(var(--x,-500px),var(--y,-500px)) scale(.6);transition:opacity .35s,transform .45s var(--izh)}
@@ -113,4 +117,24 @@
   .ozh-info{left:12px;right:12px;bottom:52px;padding:16px 18px;border-radius:var(--r-l);
     background:rgb(255 255 255/.86);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
   .ozh-tamno .ozh-info{background:rgb(36 52 92/.86)}
+}
+
+/* ================= hero redesign ================= */
+/* "не мислите" gets a yellow highlighter stroke (yellow text on the light background would be unreadable) */
+.geroi__h1 .red:nth-child(2) > span{background:linear-gradient(transparent 56%,var(--zhalto) 56%,var(--zhalto) 90%,transparent 90%);
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;padding-inline:.06em}
+/* soft yellow glow under the 3D model */
+.geroi__scena::before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(var(--gw,30%) var(--gh,24%) at var(--gx,50%) var(--gy,60%),rgb(209 254 23/.62),rgb(209 254 23/.22) 48%,transparent 72%),
+             radial-gradient(calc(var(--gw,30%) * .55) calc(var(--gh,24%) * .55) at calc(var(--gx,50%) + 9%) calc(var(--gy,60%) - 10%),rgb(209 254 23/.32),transparent 70%);transition:background-position .3s}
+@media (min-width:981px){
+  /* heading stays the only thing in the top block (the 3D code places the model below it);
+     description and buttons are pinned just above the % widget */
+  .geroi__tekst{position:static;padding-bottom:clamp(10px,3vh,40px)}  /* the 3D code fits the model between this block and the % row */
+  .geroi__h1{position:relative;z-index:3;font-size:clamp(44px,6.6vw,94px)}
+  .geroi__dolu{padding-top:28px}   /* keeps the model's bottom tip off the scroll hint */
+  .geroi__pod{position:absolute;z-index:3;left:calc((100% - min(var(--shir) + 2*var(--pole),100%)) / 2 + var(--pole));
+    bottom:calc(clamp(18px,3vh,32px) + clamp(54px,6vw,92px) * .8 + clamp(22px,3.4vh,40px))}
+  /* the model moves right and grows slightly */
+  .geroi__scena{left:22%;right:-8%;top:-4%;bottom:-4%}
 }

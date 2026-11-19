@@ -2,7 +2,7 @@
 [hidden]{display:none!important}
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --navy:#24345C; --sky:#4CACD8; --paper:#F3F5F8; --white:#fff;
+  --navy:#24345C; --sky:#4CACD8; --zhalto:#D1FE17; --paper:#F3F5F8; --white:#fff;
   --ink:color-mix(in oklch,var(--navy) 86%,black);
   --ink-2:color-mix(in oklch,var(--navy) 66%,var(--paper));
   --ink-3:color-mix(in oklch,var(--navy) 44%,var(--paper));
@@ -92,6 +92,10 @@ ul{margin:0;padding:0;list-style:none}
 .btn--linia:hover{box-shadow:inset 0 0 0 1.5px var(--navy);color:var(--ink)}
 .sek--tamno .btn--linia{--fg:#fff;box-shadow:inset 0 0 0 1.5px rgb(255 255 255/.28)}
 .sek--tamno .btn--linia:hover{box-shadow:inset 0 0 0 1.5px #fff;color:#fff}
+/* yellow accent for the main call to action ("Безплатен оглед") */
+.btn--zhalto{--bg:var(--zhalto);--fg:var(--navy);--krag:var(--navy)}
+.btn--zhalto .krag{color:var(--zhalto)}
+.btn--zhalto:hover{color:var(--zhalto)}
 .btn--tel{padding:0 22px 0 8px;gap:12px}
 .btn--tel .krag{order:-1}
 .btn--tel::before{right:auto;left:8px}

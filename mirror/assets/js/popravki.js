@@ -4,26 +4,57 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
-  /* 18. Homepage lens: the original shows it anywhere over the full-screen hero scene,
-     including over the menu, the text and the buttons. Hide it outside the model area. */
+  /* 18. Homepage hero: the original hid the cursor and showed the lens anywhere over the
+     full-screen scene (menu, headline, buttons). The model's real on-screen area is taken
+     from the 3D room labels (.bel3d), which the original code pins to points inside the
+     apartment and moves every frame. Cursor hidden + lens shown only over that area;
+     the yellow glow follows it too. */
   const scena = $('#geroi-scena');
   const leshta = $('.geroi__leshta');
-  if (scena && leshta) {
-    const poster = $('.geroi__poster', scena);
-    const ratio = 4 / 3; // the model is framed like the 2048x1536 poster (object-fit: contain)
-    const box = () => {
-      const r = (poster || scena).getBoundingClientRect();
-      let w = r.width, h = r.height;
-      if (w / h > ratio) w = h * ratio; else h = w / ratio;
-      return { l: r.left + (r.width - w) / 2, t: r.top + (r.height - h) / 2, r: r.left + (r.width + w) / 2, b: r.top + (r.height + h) / 2 };
+  if (scena) {
+    // the labels sit inside the floor; the model extends this far beyond them (calibrated)
+    const PAD = { l: .33, r: .33, t: .45, b: .65 };
+    const model = () => {
+      const pts = $$('.bel3d', scena)
+        .map((e) => [parseFloat(e.style.getPropertyValue('--x')), parseFloat(e.style.getPropertyValue('--y'))])
+        .filter(([x, y]) => isFinite(x) && isFinite(y));
+      if (pts.length < 3) return null;
+      let l = Infinity, t = Infinity, r = -Infinity, b = -Infinity;
+      for (const [x, y] of pts) { l = Math.min(l, x); r = Math.max(r, x); t = Math.min(t, y); b = Math.max(b, y); }
+      const w = r - l, h = b - t, s = scena.getBoundingClientRect();
+      l = s.left + l - w * PAD.l; r = s.left + r + w * PAD.r; t = s.top + t - h * PAD.t; b = s.top + b + h * PAD.b;
+      return { cx: (l + r) / 2, cy: (t + b) / 2, hw: (r - l) / 2, hh: (b - t) / 2, s };
+    };
+    // the apartment is a diamond in a rectangle: use an ellipse so the empty corners do not count
+    const onModel = (x, y) => {
+      const m = model();
+      if (!m) return false;
+      const dx = (x - m.cx) / m.hw, dy = (y - m.cy) / m.hh;
+      return dx * dx + dy * dy <= 1.2;
     };
     // window listener runs after the original one on the scene, so it gets the last word
     addEventListener('pointermove', (e) => {
-      if (!leshta.classList.contains('vidima')) return;
-      const b = box();
-      const inside = e.clientX > b.l && e.clientX < b.r && e.clientY > b.t && e.clientY < b.b;
-      leshta.classList.toggle('van', !inside);
+      const inside = onModel(e.clientX, e.clientY);
+      scena.classList.toggle('na-modela', inside);
+      if (leshta) leshta.classList.toggle('van', !inside);
     }, { passive: true });
+    scena.addEventListener('pointerleave', () => scena.classList.remove('na-modela'));
+    // glow position/size follow the model
+    let raf = 0;
+    const glow = () => {
+      raf = 0;
+      const m = model();
+      if (!m) return;
+      const st = scena.style;
+      st.setProperty('--gx', `${m.cx - m.s.left}px`);
+      st.setProperty('--gy', `${m.cy - m.s.top}px`);
+      st.setProperty('--gw', `${m.hw * 1.9}px`);
+      st.setProperty('--gh', `${m.hh * 1.8}px`);
+    };
+    const queue = () => { if (!raf) raf = requestAnimationFrame(glow); };
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue);
+    setInterval(queue, 700); // the 3D code moves the model after loading and on resize
   }
 
   /* 20. Paint roller on the right: looks like a scroll handle but only jumped to the top
