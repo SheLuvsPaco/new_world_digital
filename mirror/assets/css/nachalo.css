@@ -157,3 +157,11 @@
 /* load the 3D directly: the photo is only a fallback (no WebGL, or 3D not ready after 8s) */
 .geroi__poster{opacity:0}
 .geroi__scena.bez-3d .geroi__poster,.geroi__scena.kasno:not(.zhivo) .geroi__poster{opacity:1}
+
+/* phones: hero 3D labels follow the model exactly (no 0.35s position lag), stay on screen,
+   and fade out while the page is being scrolled fast (class set by popravki.js) */
+@media (max-width:980px){
+  .bel3d,.bel3d.vid{transition:opacity .25s;
+    transform:translate(clamp(70px,var(--x),calc(100vw - 70px)),var(--y)) translate(-50%,-50%)}
+  .geroi__belezhki.brzo .bel3d{opacity:0}
+}

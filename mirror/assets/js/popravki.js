@@ -182,3 +182,17 @@
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
   addEventListener('resize', fit);
 })();
+
+/* Phones: hide the hero 3D labels while the page is scrolled fast, fade them back when it settles. */
+(() => {
+  const box = document.querySelector('.geroi__belezhki');
+  if (!box || !matchMedia('(max-width: 980px)').matches) return;
+  let lastY = scrollY, lastT = performance.now(), timer = 0;
+  addEventListener('scroll', () => {
+    const now = performance.now(), v = Math.abs(scrollY - lastY) / Math.max(1, now - lastT); // px per ms
+    lastY = scrollY; lastT = now;
+    if (v > 0.8) box.classList.add('brzo');
+    clearTimeout(timer);
+    timer = setTimeout(() => box.classList.remove('brzo'), 220);
+  }, { passive: true });
+})();
