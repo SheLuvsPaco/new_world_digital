@@ -1,0 +1,15 @@
+{
+  "installCommand": "echo 'static site, nothing to install'",
+  "buildCommand": "echo 'static site, nothing to build'",
+  "outputDirectory": "mirror",
+  "headers": [
+    {
+      "source": "/assets/(css|js|fonts)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    }
+  ]
+}
