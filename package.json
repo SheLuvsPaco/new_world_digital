@@ -1,9 +1,10 @@
 {
-  "name": "website-duplicator",
+  "name": "remont-studio-fix",
   "version": "1.0.0",
-  "description": "Autonomous Playwright WebGL & Dynamic Website Mirroring Toolkit",
+  "description": "Fixed copy of konkurs-zadacha.vercel.app (NS-H5CQ)",
   "main": "scripts/capture.js",
   "scripts": {
+    "start": "node scripts/serve.js --port 3000",
     "capture": "node scripts/capture.js",
     "rewrite": "node scripts/rewrite.js",
     "serve": "node scripts/serve.js",
