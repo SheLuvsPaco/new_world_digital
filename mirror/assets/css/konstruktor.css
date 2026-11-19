@@ -109,3 +109,8 @@
 .kn__primer{position:absolute;right:var(--pole);top:calc(104px + clamp(48px,5vw,84px) * .85 + 14px);z-index:2;max-width:230px;text-align:right;font-size:13px;line-height:1.45;color:var(--ink-3)}
 @media (max-width:640px){.kn__primer{top:auto;bottom:136px;max-width:190px;font-size:12px;background:rgb(255 255 255/.86);padding:6px 10px;border-radius:10px}}
 @media (max-width:640px){.str-kn .demo-badzh{left:auto;right:10px}}
+/* the 4 home-type cards were too narrow for their labels ("Едностаен" overflowed): 2x2 when the panel is narrow */
+.kn-st{container-type:inline-size}
+.kn-karta{min-width:0}
+.kn-karta b,.kn-karta small{overflow-wrap:break-word}
+@container (max-width:520px){.kn-izbor--4{grid-template-columns:repeat(2,minmax(0,1fr))}}
